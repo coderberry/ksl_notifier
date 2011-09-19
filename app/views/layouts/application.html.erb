@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KSL Notifier</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <div class="span-24" style="background-color: #d0d0d0;">
+    HEADER
+  </div>
+  
+  <div class="span-6 border">
+    <ul>
+    <% Ad.top_level_categories.each do |category| %>
+      <li><%= link_to category, "/ads?category=#{category}" %>
+        <ul>
+      <% Ad.sub_categories(category).each do |sub_category| %>
+          <li><%= link_to sub_category, "/ads?category=#{sub_category}" %></li>
+      <% end %>
+        </ul>
+    <% end %>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="span-18 last">
+    <%= yield %>
+  </div>
+  
+  <div class="span-24">
+		The footer
+	</div>
+</div>
+
+</body>
+</html>

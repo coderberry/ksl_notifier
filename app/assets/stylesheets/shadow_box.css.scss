@@ -1,0 +1,53 @@
+.shadow_box {
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 220px;
+	height: 340px;
+	background-color: #efefef;
+	
+	.ad_number {
+		float: left;
+		width: 115px;
+		font-size: 11px;
+		padding: 8px 0 4px 8px;
+	}
+	
+	.price {
+		float: right;
+		width: 70px;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 4px 8px 4px 0;
+		text-align: right;
+	}
+	
+	.image {
+		padding: 8px 0 0 8px;
+		height: 180px;
+		img {
+			-moz-box-shadow: 3px 3px 5px #999;
+			-webkit-box-shadow: 3px 3px 5px #999;
+			box-shadow: 3px 3px 5px #999;
+			border: 3px solid #fff;
+			width: 198px;
+			height: 149px;
+		}
+	}
+	
+	.title {
+		width: 204px;
+		margin: 0 auto;
+		font-size: 16px;
+		line-height: 18px;
+		font-family: 'Marvel', sans-serif;
+	}
+	
+	.description {
+		width: 204px;
+		margin: 10px auto;
+		font-size: 12px;
+		line-height: 14px;
+		color: #333;
+	}
+}

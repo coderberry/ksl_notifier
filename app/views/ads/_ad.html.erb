@@ -1,0 +1,13 @@
+<div class="shadow_box">
+  <div class="ad_number"><%= "#{ad.city.upcase}, #{ad.state.upcase}" %></div>
+  <div class="price"><%= number_to_currency(ad.price) %></div>
+  <div class="image">
+    <%= image_tag(ad.small_image_url) %>
+  </div>
+  <div class="title">
+    <%= link_to(truncate(ad.title, :length => 60), ad_path(ad)) %>
+  </div>
+  <div class="description">
+    <%= truncate(ad.description, :length => 130) %>
+  </div>
+</div>
